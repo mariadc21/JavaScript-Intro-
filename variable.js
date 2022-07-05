@@ -14,10 +14,40 @@ if(person1.length > person2.length){
 } else if (person2.length > person1.length){
     console.log(`the name ${person2} is longer than ${person1} by ${person2.length - person1.length} characters `)
 }
-// MEDIUM: Write a program to tell if someone is shouting (typing in all caps),
-//  whispering (typing in all lowercase), or neither. 
-//  Use prompt to get user input, and then console log whether the user
-//   was shouting, whispering, or talking normally.
-// HARD: Create 4 math functions, one called add() that adds 2 numbers, one called subtract() that subtracts 2 numbers, one called multiply() to multiply 2 numbers, and one called divide() to divide two numbers.
+// MEDIUM:
+let type = prompt("Please type something:")
+ if (type == type.toUpperCase()){
+    console.log (`You are shouting`);
+ }else if(type == type.toLowerCase()){
+    console.log(`You are whispering`);
+ }else{console.log `You are talking normal`};
+
+//  Hard
+ var num1= 8;
+ var num2= 2;
+
+ console.log(num1-num2);
+ console.log(num1+num2);
+ console.log(num1/num2);
+ console.log(num1*num2);
+
+//  Very Hard
+
+let cal1 = prompt("Enter first number: ")
+let op = prompt(" Enter operation either: +, -, *, or /")
+let cal2 = prompt("Enter second number: ")
+let answer;
+
+
+if (op == "+"){
+  answer = cal1+cal2
+} else if (op == "-"){
+    answer = cal1-cal2
+} else if (op == "/"){
+    answer= cal1/cal2
+}  else if (op == "*"){
+answer = cal1 * cal2
+}
+console.log (`The answer ${cal1} ${op} ${cal2} = ${answer}`);
 
 
