@@ -26,28 +26,68 @@ let type = prompt("Please type something:")
  var num1= 8;
  var num2= 2;
 
- console.log(num1-num2);
- console.log(num1+num2);
- console.log(num1/num2);
- console.log(num1*num2);
+function add1(){
+    console.log(num1+num2)
+}
+function sub1(){
+    console.log(num1-num2)
+}
+function mul1(){
+    console.log(num1*num2)
+}
+function div1(){
+    console.log(num1/num2)
+}
+add1();
+sub1();
+mul1();
+div1();
 
 //  Very Hard
 
-let cal1 = prompt("Enter first number: ")
-let op = prompt(" Enter operation either: +, -, *, or /")
-let cal2 = prompt("Enter second number: ")
-let answer;
-
+function calculator(){
+    let cal1 = prompt("Enter first number: ")
+    let x= parseInt(cal1);
+    let op = prompt(" Enter operation either: +, -, *, or /")
+    let cal2 = prompt("Enter second number: ")
+    let y= parseInt(cal2);
+    let answer;
+    
+    function add(){
+        answer = x+y
+    }
+    function sub(){
+        answer = x-y
+    }
+    function mult(){
+        answer = x*y
+    }
+    function divide(){
+        answer = x/y
+    }
 
 if (op == "+"){
-  answer = cal1+cal2
+   add();
 } else if (op == "-"){
-    answer = cal1-cal2
+   sub();
 } else if (op == "/"){
-    answer= cal1/cal2
-}  else if (op == "*"){
-answer = cal1 * cal2
-}
+    divide();
+} else if (op == "*"){
+    mult();
+} else console.log(`error`)
 console.log (`The answer ${cal1} ${op} ${cal2} = ${answer}`);
+var use =[]
+let cont = prompt("Use calculator?: Y/N")
+use.push(cont);
 
+if(use.indexOf("Y") == 0 ) {
+    calculator()
+} else console.log (`Have a nice day. Bye`)
+}
+var use =[]
+let cont = prompt("Use calculator?: Y/N")
+use.push(cont);
 
+if(use.indexOf("Y") == 0 ) {
+    calculator()
+} else console.log (`Have a nice day. Bye`)
